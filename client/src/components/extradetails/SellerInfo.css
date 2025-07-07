@@ -1,0 +1,60 @@
+.seller-container {
+    padding: 40px;
+    background-color: #f0f8ff;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.seller-heading {
+    font-size: 36px;
+    color: #2874f0;
+    margin-bottom: 20px;
+}
+
+.seller-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.seller-sections {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.seller-card {
+    background-color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.seller-card h2 {
+    font-size: 20px;
+    color: #2874f0;
+    margin-bottom: 10px;
+}
+
+.seller-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.seller-button {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seller-button:hover {
+    background-color: #0b5ed7;
+}
