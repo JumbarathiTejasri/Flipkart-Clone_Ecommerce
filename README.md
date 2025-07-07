@@ -81,8 +81,8 @@ npm install
 
 #### 📁 server/.env
 ```
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
+DB_USERNAME="your_username"
+DB_PASSWORD="your_password"
 ```
 
 ### 4. Run the Project
