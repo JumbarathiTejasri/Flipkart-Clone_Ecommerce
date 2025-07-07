@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Box, Typography, Button } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { styled } from '@mui/system';
+import { useDispatch } from 'react-redux';
+import { emptyCart } from '../../redux/actions/cartActions';
 
 const Container = styled(Box)({
   minHeight: '80vh',
@@ -47,10 +49,13 @@ const ContinueButton = styled(Button)({
 const PaymentSuccess = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const amount = location.state?.amount || 0;
 
   const handleContinue = () => {
-    navigate('/');
+    dispatch(emptyCart());         // 🧹 Clear the cart
+    navigate('/');                 // 🔁 Navigate to Home
   };
 
   return (
