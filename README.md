@@ -74,7 +74,7 @@ npm install
 #### Client:
 ```bash
 cd ../client
-npm install
+npm install --legacy-peer-deps
 ```
 
 ### 3. Add Environment Variables
