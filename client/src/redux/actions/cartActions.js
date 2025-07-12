@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import * as actionType from '../constants/cartConstant';
 
-const URL='http://localhost:8000';
+const URL = process.env.REACT_APP_API_URL;
 
 
 
