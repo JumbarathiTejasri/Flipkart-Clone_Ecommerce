@@ -5,12 +5,23 @@ import {useSelector,useDispatch} from 'react-redux';
 import { getProducts } from '../../redux/actions/productAction';
 import { Link } from 'react-router-dom';
 
-const SearchContainer=styled(Box)
-    `background:#fff;
-     width:38%;
-     border-radius:2px;
-     margin-left:10px;
-     display:flex;`
+const SearchContainer = styled(Box)(({ theme }) => ({
+  background: '#fff',
+  borderRadius: 2,
+  marginLeft: 10,
+  display: 'flex',
+  width: '38%', // default
+
+  [theme.breakpoints.down('md')]: {
+    width: '60%',
+    marginLeft:10, // tablets and small laptops
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '80%', // phones
+    marginLeft: 10, // remove extra left margin on mobile
+  }
+}));
+
 
 const InputSearchBase=styled(InputBase)
     `padding-left:20px;  

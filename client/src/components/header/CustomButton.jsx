@@ -30,7 +30,8 @@ const Wrapper =styled(Box)(({theme})=>({
             alignItems:'center',
             '& > *':{
               margin:'10px 0',
-            }
+              color: '#000000 !important',
+            },
           },
           [theme.breakpoints.down('sm')]:{
             display:'block'
@@ -87,8 +88,8 @@ const CustomButtons=()=>{
             account ? <Profile account={account} setAccount={setAccount} />:
             <LoginButton variant="contained" onClick={() => openDialog()}>Login</LoginButton>
           }
-          <Typography style={{ marginTop: 3, width: 135 }} onClick={handleSellerClick}>Become a Seller</Typography>
-          <Typography style={{marginTop:3}}  onClick={handleMoreClick}>More</Typography>
+          <Typography style={{ marginTop: 3, width: 135, cursor: 'pointer' }} onClick={handleSellerClick}>Become a Seller</Typography>
+          <Typography style={{marginTop:3, cursor: 'pointer'}}  onClick={handleMoreClick}>More</Typography>
 
           <Container to="/cart">
                <Badge badgeContent={cartItems?.length} color="secondary">
